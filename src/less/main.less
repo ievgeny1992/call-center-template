@@ -2,27 +2,220 @@
 @import 'flexboxgrid';
 @import 'media';
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&subset=cyrillic-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
-@header-font: 'Roboto Slab', serif;
-@regular-font: 'Roboto', serif;
+@regular-font: 'Montserrat', sans-serif; 
+@logo-font: 'Roboto Condensed', sans-serif; 
 
-@primary-color: #e23d41;
+@gradient-color: linear-gradient(0deg,#1084d9,#9eca2b);
+@bg-color: #f6f6f6;
 
 body{
     font-family: @regular-font;
+    background-color: @bg-color;
 }
 
 .wrap {
     box-sizing: border-box;
-    max-width: 1280px;
+    max-width: 1380px;
     margin: 0px auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     @media @tablet {
-        padding-top: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.container-fluid {
+    @media @tablet {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    @media @desktop {
+        padding-right: 60px;
+        padding-left: 60px;
+    }
+}
+
+.title{
+    position: relative;
+    z-index: 1;
+    font-family: @regular-font;
+    font-weight: 900;
+    font-size: 35px;
+    margin: 15px 0px;
+    text-transform: uppercase;
+
+    @media @tablet {
+        font-size: 50px;
+        margin: 30px 0px;
+    }
+}
+
+.subtitle{
+    position: relative;
+    z-index: 1;
+    font-family: @regular-font;
+    font-weight: 800;
+    font-size: 20px;
+    margin: 5px 0px;
+    text-transform: uppercase;
+
+    @media @tablet {
+        font-size: 25px;
+        margin: 15px 0px;
+    }
+}
+
+.text{
+    position: relative;
+    z-index: 1;
+    font-family: @regular-font;
+    font-weight: 400;
+    color: #000;
+    font-size: 15px;
+    margin: 15px 0px;
+
+    @media @tablet {
+        font-size: 18px;
+        margin: 25px 0px;
+    }
+}
+
+.header{
+    background-color: #fff;
+
+    &__logo{
+        font-family: @logo-font;
+        font-weight: 700;
+        font-size: 22px;
+        color: #000;
+
+        @media @tablet {
+            font-size: 26px;
+        }
+
+        &_highlight{
+            color: #50cdc5;
+        }
+    }
+
+    &__callback-link{
+        text-decoration: none;  
+        color: #000; 
+    }
+
+    &__callback{
+        position: relative;
+        z-index: 1;
+        font-family: @regular-font;
+        font-weight: 700;
+        font-size: 16px;
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @media @tablet {
+            font-size: 17px;
+            color: #fff;
+        }
+    }
+
+    &__wrap{
+        position: relative;
+        padding-top: 15px;
+        padding-bottom: 35px;
+
+        @media @tablet {
+            padding-top: 20px;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__fill{
+        background-color: #9eca2b;
+        position: absolute;
+
+        @media @tablet {
+            // width: 200px;
+        }
+
+        @media @tablet {
+            margin-left: 8.33333333%;
+            width: 33.33333333%;
+            height: calc(~"100% + 60px");
+            top: 0px;
+            right: 0px;
+        }
+    }
+}
+
+.call-center-module{
+    background-color: @bg-color;
+
+    &__wrap{
+        position: relative;
+        background-color: @bg-color;
         padding-bottom: 50px;
+
+        @media @tablet {
+            padding-bottom: 150px;
+        }
+
+        @media @desktop {
+            padding-bottom: 150px;
+        }
+    }
+
+    &__subtitle_highlight{
+        color: #fff;
+        background-color: #9eca2b;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: 700;
+
+        @media @tablet {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    &__gradient-wrap{
+        position: relative;
+    }
+
+    &__gradient{
+        background: @gradient-color;
+        position: absolute;
+
+        @media @tablet {
+            // width: 200px;
+        }
+
+        @media @tablet {
+            margin-left: 8.33333333%;
+            width: 33.33333333%;
+            // height: calc(~"100% + 60px");
+            height: 100%;
+            top: 0px;
+            right: 0px;
+        }
+    }
+}
+
+.actions{
+    &__wrap{
+        background-color: #fff;
+        padding-top: 30px;
+        padding-bottom: 20px;
+
+        @media @tablet {
+            padding-top: 70px;
+            padding-bottom: 30px;
+        }
     }
 }
