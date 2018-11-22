@@ -2,7 +2,7 @@
 @import 'flexboxgrid';
 @import 'media';
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800,900&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800,900&subset=cyrillic-ext');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
 
 @regular-font: 'Montserrat', sans-serif; 
@@ -46,13 +46,15 @@ body{
     z-index: 1;
     font-family: @regular-font;
     font-weight: 900;
-    font-size: 35px;
+    font-size: 30px;
     margin: 15px 0px;
+    padding: 5px 0px;
     text-transform: uppercase;
 
     @media @tablet {
         font-size: 50px;
-        margin: 30px 0px;
+        margin: 20px 0;
+        padding: 20px 0px;
     }
 }
 
@@ -75,14 +77,33 @@ body{
     position: relative;
     z-index: 1;
     font-family: @regular-font;
-    font-weight: 400;
+    font-weight: 500;
     color: #000;
     font-size: 15px;
     margin: 15px 0px;
+    padding: 5px 0px;
 
     @media @tablet {
+        font-size: 17px;
+        margin: 25px 0;
+        padding: 10px 0px;
+    }
+
+    @media @desktop {
         font-size: 18px;
-        margin: 25px 0px;
+    }
+}
+
+.paragraph-separator{
+    width: 200px;
+    height: 0px;
+    border: 2.5px solid #1086da;
+    margin-left: -150px;
+
+    @media @tablet {
+        margin-left: -50px;
+        margin-top: 45px;
+        margin-bottom: 45px;
     }
 }
 
@@ -106,7 +127,7 @@ body{
 
     &__callback-link{
         text-decoration: none;  
-        color: #000; 
+        color: #fff; 
     }
 
     &__callback{
@@ -115,7 +136,7 @@ body{
         font-family: @regular-font;
         font-weight: 700;
         font-size: 16px;
-        color: #000;
+        color: #1084d8;
         text-decoration: none;
         text-transform: uppercase;
 
@@ -141,26 +162,29 @@ body{
         position: absolute;
 
         @media @tablet {
-            // width: 200px;
-        }
-
-        @media @tablet {
+            right: 0px;
             margin-left: 8.33333333%;
             width: 33.33333333%;
-            height: calc(~"100% + 60px");
+            // height: calc(~"100% + 60px");
+            height: 100%;
             top: 0px;
-            right: 0px;
+        }
+
+        @media @desktop {
+            right: 60px;
         }
     }
 }
 
 .call-center-module{
     background-color: @bg-color;
+    overflow: hidden;
 
     &__wrap{
         position: relative;
         background-color: @bg-color;
-        padding-bottom: 50px;
+        padding-top: 40px;
+        padding-bottom: 40px;
 
         @media @tablet {
             padding-bottom: 150px;
@@ -193,29 +217,145 @@ body{
         position: absolute;
 
         @media @tablet {
-            // width: 200px;
-        }
-
-        @media @tablet {
+            right: 0px;
             margin-left: 8.33333333%;
             width: 33.33333333%;
-            // height: calc(~"100% + 60px");
             height: 100%;
             top: 0px;
+        }
+
+        @media @desktop {
+            right: 60px;
+        }
+    }
+
+    &__img{
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+
+        @media @tablet {
+            position: absolute;
+            width: 40%;
+            top: 180px;
+            right: -20px;
+        }
+
+        @media @desktop {
+            width: 40%;
+            top: 5px;
             right: 0px;
         }
     }
 }
 
 .actions{
+    
     &__wrap{
+        position: relative;
         background-color: #fff;
-        padding-top: 30px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        @media @tablet {
+            padding-top: 90px;
+            padding-bottom: 30px;
+        }
+    }
+
+    &__img{
+        position: relative;
+        display: block;
+        width: 90%;
+        margin: 15px auto;
+
+        @media @tablet {
+            // position: absolute;
+            margin: 15px 0px 15px 0px;
+        }
+
+        @media @desktop {
+            width: 90%;
+        }
+    }
+
+    &__paragraph-wrap{
         padding-bottom: 20px;
 
         @media @tablet {
-            padding-top: 70px;
-            padding-bottom: 30px;
+            padding-bottom: 40px;
         }
+    }
+
+    &__paragraph-separator{
+        border: 2.5px solid #15a2ed;
+    }
+
+    &__subtitle_highlight{
+        color: #fff;
+        background-color: #15a2ed;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: 700;
+
+        @media @tablet {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}
+
+.system-know{
+    background-color: #f6f6f6;
+    overflow: hidden;
+
+    &__wrap{
+        position: relative;
+    }
+
+    &__gradient{
+        background: @gradient-color;
+        position: absolute;
+
+        @media @tablet {
+            right: 0px;
+            margin-left: 8.33333333%;
+            width: 33.33333333%;
+            height: 100%;
+            top: 0px;
+        }
+
+        @media @desktop {
+            right: 60px;
+        }
+    }
+
+    &__img{
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+
+        @media @tablet {
+            position: absolute;
+            width: 40%;
+            top: 300px;
+            right: -30px;
+            // margin-top: -208px;
+        }
+
+        @media @desktop {
+            width: 40%;
+            top: 50%;
+            right: 0px;
+            margin-top: -208px;
+        }
+    }
+
+    &__paragraph-separator{
+        border: 2.5px solid #a1ca28;
     }
 }
