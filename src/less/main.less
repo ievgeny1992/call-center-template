@@ -316,7 +316,7 @@ body{
     }
 
     &__paragraph-separator{
-        border: 2.5px solid #15a2ed;
+        border-color: #15a2ed;
     }
 
     &__subtitle_highlight{
@@ -451,7 +451,7 @@ body{
     }
 
     &__paragraph-separator{
-        border: 2.5px solid #a1ca28;
+        border-color: #a1ca28;
     }
 }
 
@@ -518,5 +518,119 @@ body{
             right: 53px;
             margin-top: -208px;
         }
+    }
+}
+
+.sale-scripts{
+    background-color: #f6f6f6;
+    
+    &__wrap{
+        position: relative;
+        background-color: #fff;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @media @tablet {
+            padding-top: 70px;
+            padding-bottom: 115px;
+        }
+
+        @media @desktop {
+            padding-top: 70px;
+            padding-bottom: 200px;
+        }
+    }
+
+    &__img-wrap{
+        position: relative;
+    }
+
+    &__img{
+        position: relative;
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+
+        @media @tablet {
+            position: absolute;
+            width: 400px;
+            right: 10px;
+        }
+
+        @media @desktop {
+            right: 15px;
+            width: 500px;
+        }
+    }
+}
+
+.best-of-operators{
+    background-color: #f6f6f6;
+    overflow: hidden;
+
+    &__wrap{
+        position: relative;
+        padding-top: 30px;
+        padding-bottom: 50px;
+
+        @media @tablet {
+            padding-top: 80px;
+            padding-bottom: 70px;
+        }
+
+        @media @desktop {
+            padding-top: 100px;
+            padding-bottom: 70px;
+        }
+    }
+
+    &__img{
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+
+        @media @tablet {
+            position: absolute;
+            width: 37%;
+            top: 215px;
+            right: -5px;
+        }
+
+        @media @desktop {
+            width: 35%;
+            top: 50%;
+            right: 53px;
+            margin-top: -208px;
+        }
+    }
+
+    &__paragraph-separator{
+        border-color: #a1ca28;
+    }
+
+    &__ellipse{
+        display: none;
+
+        @media @tablet {
+            display: block;
+            width: 180px;
+            margin: 60px auto 30px auto;
+        }
+
+        @media @desktop {
+            width: 200px;
+            margin: 80px auto 60px auto;
+        }
+    }
+}
+
+.footer{
+    background-color: #f6f6f6;
+
+    &__wrap{
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
 }
