@@ -99,9 +99,10 @@ body{
     height: 0px;
     border: 2.5px solid #1086da;
     margin-left: -150px;
+    box-sizing: border-box;
 
     @media @tablet {
-        margin-left: -50px;
+        margin-left: -60px;
         margin-top: 45px;
         margin-bottom: 45px;
     }
@@ -732,6 +733,96 @@ body{
             margin-top: 20px;
             margin-left: 90px;
             margin-bottom: 45px;
+        }
+    }
+}
+
+.lv-support{
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @media @tablet {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    @media @desktop {
+
+    }
+
+    &__wrap{
+        background: linear-gradient(0deg,#1083d8,#72d393);
+        padding-top: 30px;
+        padding-bottom: 30px;
+    
+        @media @tablet {
+            padding-top: 100px;
+            padding-bottom: 140px;
+        }
+    
+    }
+
+    &__title{
+        font-family: @regular-font;
+        font-weight: 700;
+        font-size: 30px;
+        margin: 15px 0px;
+        padding: 5px 0px;
+        text-transform: uppercase;
+
+        @media @tablet {
+            font-size: 50px;
+            margin: 20px 0;
+            padding: 20px 0px;
+        }
+    }
+
+    &__img-wrap{
+        position: relative;
+    }
+
+    &__img{
+        position: relative;
+        width: 90%;
+        display: block;
+        margin: 20px auto;
+
+        @media @tablet {
+            position: absolute;
+            width: 438px;
+            top: 31px;
+            right: 10px;
+        }
+
+        @media @desktop {
+            position: absolute;
+            width: 510px;
+            right: 60px;
+            top: 20px;
+        }
+    }
+
+    &__text-wrap{
+        background-color: #fff;
+
+        @media @tablet {
+            padding: 10px 50px;
+        }
+
+        @media @desktop {
+            padding: 10px 60px;
+        }
+    }
+
+    &__paragraph-separator{
+        box-sizing: border-box;
+        border-color: #1086da;
+        visibility: hidden;
+
+        @media @tablet {
+            visibility: visible;
+            margin-left: -160px;
         }
     }
 }
