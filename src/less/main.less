@@ -275,7 +275,7 @@ body{
 }
 
 .actions{
-    overflow: hidden;
+    overflow: visible;
     &__wrap{
         position: relative;
         background-color: #fff;
@@ -285,6 +285,43 @@ body{
         @media @tablet {
             padding-top: 70px;
             padding-bottom: 110px;
+        }
+    }
+
+    &__quadro-el{
+        position: absolute;
+        visibility: hidden;
+
+        @media @tablet {
+            visibility: visible;
+            z-index: 100;
+            width: 26px;
+            top: -46px;
+            left: -13px;
+        }
+
+        @media @desktop {
+            width: 30px;
+            top: -140px;
+            left: -16px;
+        } 
+    }
+
+    &__triple-el{
+        position: absolute;
+        visibility: hidden;
+
+        @media @tablet {
+            visibility: visible;
+            width: 150px;
+            top: 250px;
+            right: 35px;
+        }
+
+        @media @desktop {
+            width: 150px;
+            top: 150px;
+            right: 150px;
         }
     }
 
@@ -573,6 +610,42 @@ body{
         }
     }
 
+    &__triple-el{
+        position: absolute;
+        visibility: hidden;
+
+        @media @tablet {
+            visibility: visible;
+            width: 100px;
+            top: 250px;
+            right: 35px;
+        }
+
+        @media @desktop {
+            width: 100px;
+            top: 100px;
+            right: 100px;
+        }
+    }
+
+    &__quadro-el{
+        position: absolute;
+        visibility: hidden;
+
+        @media @tablet {
+            visibility: visible;
+            width: 110px;
+            top: 60px;
+            left: -13px;
+        }
+
+        @media @desktop {
+            width: 110px;
+            top: 30px;
+            left: -13px;
+        } 
+    }
+
     &__img-wrap{
         position: relative;
     }
@@ -590,7 +663,7 @@ body{
         }
 
         @media @desktop {
-            right: 15px;
+            right: 0px;
             width: 500px;
         }
     }
