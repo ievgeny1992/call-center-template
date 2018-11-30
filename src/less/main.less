@@ -111,13 +111,17 @@ body{
 .gradient-line{
     background: @gradient-color;
     position: absolute;
+    width: 50%;
+    top: 0;
+    height: 100%;
+    margin-left: 50%;
+    right: 25%;
 
     @media @tablet {
         right: 0px;
         margin-left: 8.33333333%;
         width: 33.33333333%;
         height: 100%;
-        top: 0px;
     }
 
     @media @desktop {
