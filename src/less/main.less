@@ -912,3 +912,128 @@ body{
         padding-bottom: 0px;
     }
 }
+
+#form-modal{
+    display: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+.modal-block{
+
+    box-sizing: border-box;
+    padding: 20px;
+
+    @media @tablet {
+        padding: 30px;
+    }
+
+    &__title{
+        font-family: @regular-font;
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 21px;
+
+        @media @tablet {
+            font-size: 32px;
+        }
+    }
+
+    &__text{
+        font-family: @regular-font;
+        font-weight: 500;
+        font-size: 14px;
+        color: #000;
+        text-align: center;
+
+        @media @tablet {
+            font-size: 17px;
+        }
+    }
+}
+
+.callback-form{
+    width: 100%;
+    margin: 15px auto;
+
+    @media @tablet {
+        width: 85%;
+        margin: 35px auto;
+    }
+
+    &__label{
+        display: block;
+        font-family: @regular-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 15px;
+
+        @media @tablet {
+            font-size: 16px;
+        }
+    }
+
+    &__input{
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        border: none;
+        background-color: #f6f6f6;
+        box-sizing: border-box;
+        outline: none;
+        padding: 10px;
+        font-family: @regular-font;
+        font-size: 15px;
+
+        @media @tablet {
+            margin-top: 10px;
+            margin-bottom: 35px;
+            padding: 15px 10px;
+            font-size: 16px;
+        }
+    }
+
+    &__button{
+        width: 100%;
+        background-color: #8dd05c;
+        color: #fff;
+        font-family: @regular-font;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: none;
+        padding: 15px 10px;
+        cursor: pointer;
+        box-shadow: 9px 9px 0 0px #149deb;
+        outline: none;
+        margin-top: 25px;
+
+        @media @tablet {
+            font-size: 17px;
+            padding: 20px 10px;
+            margin-top: 35px;
+        }
+    }
+
+    &__conf-text{
+        display: block;
+        font-family: @regular-font;
+        font-weight: 500;
+        font-size: 15px;
+        color: #000;
+        text-align: center;
+        margin: 15px 0px;
+
+        @media @tablet {
+            font-size: 16px;
+            margin: 20px 0px;
+        }
+    }
+}
+
+.fancybox-slide--html .fancybox-close-small{
+    background-color: #e61c3d;
+    color: #fff !important;
+}
