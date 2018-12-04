@@ -386,7 +386,7 @@ body{
     margin-top: 20px;
 
     @media @tablet {
-        width: 80%;
+        width: 570px;
         background: url(../img/border_all.png) no-repeat center center;
         background-size: contain;
         padding: 30px 0px;
@@ -394,7 +394,7 @@ body{
     }
 
     @media @desktop {
-        width: 65%;
+        width: 750px;
         padding: 40px 0px;
     }
 
@@ -440,16 +440,16 @@ body{
         @media @tablet {
             display: block;
             position: absolute;
-            width: 60px;
-            top: -40px;
-            left: 10px;
+            width: 50px;
+            top: -28px;
+            left: 0px;
         }
 
         @media @desktop {
             display: block;
             position: absolute;
             width: 60px;
-            top: -40px;
+            top: -30px;
             left: 10px;
         }
     }
@@ -531,6 +531,61 @@ body{
     &__wrap{
         position: relative;
         background-color: #fff;
+        padding-top: 40px;
+        padding-bottom: 30px;
+
+        &:before{
+
+            @media @tablet {
+                visibility: hidden;
+            }
+
+            @media @desktop {
+                visibility: visible;
+                content: '';
+                background: url(../img/el_1.svg) no-repeat;
+                width: 40px;
+                height: 450px;
+                position: absolute;
+                left: 50%;
+                bottom: 130px;
+                margin-left: -20px;
+            }
+        }
+
+        @media @tablet {
+            padding-top: 50px; 
+        }
+
+        @media @desktop {
+            padding-top: 210px;
+        }
+    }
+
+    // &__left-block{
+    //     position: relative;
+
+    //     &:after{
+    //         visibility: visible;
+    //         content: '';
+    //         background: url(../img/el_1.svg) no-repeat;
+    //         width: 40px;
+    //         height: 100%;
+    //         position: absolute;
+    //         left: 0px;
+    //         top: 0px;
+    //         transform: rotate(-90deg);
+
+    //         @media @desktop {
+    //             visibility: hidden;
+    //         }
+    //     }
+    // }
+
+    &__el-separator{
+        display: block;
+        transform: rotate(-90deg);
+        height: 100%;
     }
 
     &__subtitle_highlight{
@@ -553,6 +608,25 @@ body{
 
     &__paragraph-separator{
         border-color: #15a2ed;
+        margin-left: -150px;
+
+        @media @tablet {
+            margin-left: -53px;
+        }
+    }
+}
+
+.callback{
+    position: relative;
+
+    &__wrap{
+        background-color: #fff;
+        padding-top: 10px;
+        padding-bottom: 40px;
+
+        @media @tablet {
+            padding-bottom: 120px;
+        }
     }
 }
 
@@ -751,7 +825,7 @@ body{
 
         @media @desktop {
             padding-top: 100px;
-            padding-bottom: 100px;
+            padding-bottom: 170px;
         }
     }
 
@@ -761,10 +835,13 @@ body{
 
         @media @tablet {
             padding: 1px 0px;
+            width: 570px;
+            margin: 0 auto;
         }
 
         @media @desktop {
             padding: 5px 0px;
+            width: 750px;
         }
     }
 
@@ -810,6 +887,44 @@ body{
             margin-top: 20px;
             margin-left: 90px;
             margin-bottom: 45px;
+        }
+    }
+
+    &__paragraph-separator{
+        position: absolute;
+        visibility: hidden;
+
+        @media @tablet {
+            visibility: visible;
+            bottom: -50px;
+            left: 100px;
+        }
+
+        @media @desktop {
+            bottom: 0px;
+            left: 100px;
+        }
+    }
+
+    &__elipse{
+        position: absolute;
+        visibility: hidden;
+        display: none;
+
+        @media @tablet {
+            display: block;
+            visibility: visible;
+            width: 20px;
+            left: 0px;
+            bottom: 0px;
+            margin-left: -10px;
+        }
+
+        @media @desktop {
+            width: 30px;
+            left: 0px;
+            bottom: 0px;
+            margin-left: -15px;
         }
     }
 }
@@ -908,8 +1023,13 @@ body{
     background-color: #f6f6f6;
 
     &__wrap{
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    &__text{
+        font-family: @regular-font;
+        font-weight: 500;
     }
 }
 
@@ -968,10 +1088,6 @@ body{
         font-weight: 700;
         text-transform: uppercase;
         font-size: 15px;
-
-        @media @tablet {
-            font-size: 16px;
-        }
     }
 
     &__input{
@@ -988,7 +1104,7 @@ body{
 
         @media @tablet {
             margin-top: 10px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             padding: 15px 10px;
             font-size: 16px;
         }
@@ -1013,7 +1129,7 @@ body{
         @media @tablet {
             font-size: 17px;
             padding: 20px 10px;
-            margin-top: 35px;
+            margin-top: 30px;
         }
     }
 
