@@ -187,7 +187,6 @@ body{
             right: 0px;
             margin-left: 8.33333333%;
             width: 33.33333333%;
-            // height: calc(~"100% + 60px");
             height: 100%;
             top: 0px;
         }
@@ -336,7 +335,6 @@ body{
         margin: 15px auto;
 
         @media @tablet {
-            // position: absolute;
             margin: 15px 0px 15px 0px;
         }
 
@@ -396,6 +394,21 @@ body{
     @media @desktop {
         width: 750px;
         padding: 40px 0px;
+    }
+
+    &:after{
+        visibility: visible;
+        content: '';
+        background: url(../img/zoom.png) no-repeat;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 10px;
+        bottom: 35px;
+
+        @media @tablet {
+            visibility: hidden;
+        }
     }
 
     &__img{
@@ -511,6 +524,21 @@ body{
         }
     }
 
+    &__ellipse{
+        display: none;
+
+        @media @tablet {
+            display: block;
+            position: absolute;
+            width: 200px;
+            bottom: 0px;
+        }
+
+        @media @desktop {
+            width: 170px;
+        }
+    }
+
     &__subtitle_highlight{
         color: #fff;
         background-color: #a1ca28;
@@ -562,30 +590,18 @@ body{
         }
     }
 
-    // &__left-block{
-    //     position: relative;
-
-    //     &:after{
-    //         visibility: visible;
-    //         content: '';
-    //         background: url(../img/el_1.svg) no-repeat;
-    //         width: 40px;
-    //         height: 100%;
-    //         position: absolute;
-    //         left: 0px;
-    //         top: 0px;
-    //         transform: rotate(-90deg);
-
-    //         @media @desktop {
-    //             visibility: hidden;
-    //         }
-    //     }
-    // }
-
     &__el-separator{
         display: block;
-        transform: rotate(-90deg);
-        height: 100%;
+        width: 100%;
+        padding: 5px 0px;
+
+        @media @tablet {
+            padding: 15px 0px;  
+        }
+
+        @media @desktop {
+            display: none;
+        }
     }
 
     &__subtitle_highlight{
@@ -842,6 +858,21 @@ body{
         @media @desktop {
             padding: 5px 0px;
             width: 750px;
+        }
+
+        &:after{
+            visibility: visible;
+            content: '';
+            background: url(../img/zoom.png) no-repeat;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+    
+            @media @tablet {
+                visibility: hidden;
+            }
         }
     }
 
