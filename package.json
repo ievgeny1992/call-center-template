@@ -11,15 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.3",
-    "eslint": "^3.19.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.10.0",
     "gulp-ejs": "^3.3.0",
-    "gulp-rename": "^1.4.0",
-    "stylelint": "^7.10.1"
+    "gulp-rename": "^1.4.0"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
     "gulp-less": "^3.5.0"
   }
 }
